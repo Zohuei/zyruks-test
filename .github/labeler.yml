@@ -11,7 +11,6 @@ excludeLabels:
   - "Priority: High +"
   - "Priority: Low -"
   - "Priority: Medium"
-  - 
 # custom configuration to override default behaviour
 # control explicitly what gets added and when
 custom:
