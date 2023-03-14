@@ -12,4 +12,5 @@ custom:
     keywords:
       - 'work in progress'
     labels:
-      - Status: WIP
+      - 'Status: WIP'
+      - 'Documentation'
