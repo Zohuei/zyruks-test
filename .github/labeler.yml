@@ -1,5 +1,5 @@
 # Number of labels to fetch (optional). Defaults to 100
-numLabels: 28
+numLabels: "28"
 # These labels will not be used even if the issue contains them (optional).
 # Pass a blank array if no labels are to be excluded.
 # excludeLabels: []
@@ -16,14 +16,13 @@ excludeLabels:
 custom:
   - location: body
     keywords:
-      - 'work in progress'
+      - "work in progress"
     labels:
-      - 'Status: WIP'
+      - "Status: WIP"
   - location: body
     keywords:
-      - 'OS: Linux'
+      - "OS: Linux"
     labels:
-      - 'Os: Linux'
-      
-      
+      - "Os: Linux"
+
     # need to create more auto labels, check first how you are going to implement this
