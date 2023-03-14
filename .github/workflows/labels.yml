@@ -25,4 +25,3 @@ jobs:
           dry-run: false
           exclude: |
             help*
-            *issue
