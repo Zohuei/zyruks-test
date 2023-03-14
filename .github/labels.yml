@@ -40,27 +40,27 @@
   description: Has had no activity for some time.
 
 - name: "Status: Abandoned"
-  color: "#000000"
+  color: 000000
   description: Abandoned and will not be worked on.
 
 - name: "Status: Accepted"
-  color: "#009800"
+  color: 009800
   description: Accepted and will be worked on.
 
 - name: "Status: Available"
-  color: "#bfe5bf"
+  color: bfe5bf
   description: Available for anyone to work on.
 
 - name: "Status: Completed"
-  color: "#006b75"
+  color: 006b75
   description: This issue has been completed.
 
 - name: "Status: Pending"
-  color: "#fef2c0"
+  color: fef2c0
   description: This issue is pending and will not be worked on until the pending status is resolved.
 
 - name: "Status: Revision Needed"
-  color: "#e11d21"
+  color: e11d21
   description: This issue needs to be revised before it can be worked on.
 
 - name: "Duplicate"
