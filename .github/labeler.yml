@@ -19,10 +19,5 @@ custom:
       - "work in progress"
     labels:
       - "Status: WIP"
-  - location: body
-    keywords:
-      - "OS: Linux"
-    labels:
-      - "Os: Linux"
 
     # need to create more auto labels, check first how you are going to implement this
