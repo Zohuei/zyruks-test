@@ -20,10 +20,9 @@ custom:
       - 'work in progress'
     labels:
       - 'Status: WIP'
-
   - location: body
     keywords:
-      - 'Os: Linux'
+      - 'OS: Linux'
     labels:
       - 'Os: Linux'
       
