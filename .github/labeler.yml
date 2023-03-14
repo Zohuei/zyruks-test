@@ -1,23 +1,15 @@
 # Number of labels to fetch (optional). Defaults to 100
-numLabels: "28"
+numLabels: 40
 # These labels will not be used even if the issue contains them (optional).
 # Pass a blank array if no labels are to be excluded.
 # excludeLabels: []
 excludeLabels:
   - pinned
-  - Duplicate
-  - Invalid
-  - "Priority: Critical"
-  - "Priority: High +"
-  - "Priority: Low -"
-  - "Priority: Medium"
 # custom configuration to override default behaviour
 # control explicitly what gets added and when
 custom:
-  - location: body
+  - location: title
     keywords:
-      - "work in progress"
+      - "WIP"
     labels:
       - "Status: WIP"
-
-    # need to create more auto labels, check first how you are going to implement this
