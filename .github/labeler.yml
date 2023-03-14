@@ -13,3 +13,9 @@ custom:
       - "WIP"
     labels:
       - "Status: WIP"
+  - location: body
+    keywords:
+      - "work in progress"
+    labels:
+      - "Status: WIP"
+
