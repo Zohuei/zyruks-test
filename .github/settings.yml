@@ -1,2 +1,1 @@
-- name: GitHub Labeler
-  uses: crazy-max/ghaction-github-labeler@v4.1.0
+
