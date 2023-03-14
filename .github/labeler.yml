@@ -10,7 +10,7 @@ excludeLabels:
 custom:
   - location: title
     keywords:
-      - "WIP"
+      - "work in progress"
     labels:
       - "Status: WIP"
   - location: body
