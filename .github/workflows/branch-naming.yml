@@ -1,17 +1,14 @@
-name: Linters
-
-on:
-  push:
-  pull_request:
-    branches: 'main'
+name: 'Assert Branch Naming Convention'
+on: pull_request
 
 jobs:
-  gitlint:
+  branch-naming-rules:
     runs-on: ubuntu-latest
-    name: GitLint
     steps:
-      - name: Lint commits, branches, and pull requests
-        uses: aschbacd/gitlint-action@v1.1.1
+      - uses: deepakputhraya/action-branch-name@master
         with:
-          re-commit-message-subject: ^(RS-[0-9]{2,4}-[a-zA-Z0-9-]+)$
-          re-pull-request-title: ^(\[[A-Z]+\-[0-9]+\] )?[A-Z].*((?!\.).)$
+          regex: '^(RS-[0-9]{2,4}-[a-zA-Z0-9-]+)$' # Regex the branch should match. This example enforces grouping
+          allowed_prefixes: 'feature,stable,fix' # All branches should start with the given prefix
+          ignore: master,develop # Ignore exactly matching branch names from convention
+          min_length: 5 # Min length of the branch name
+          max_length: 20 # Max length of the branch name
