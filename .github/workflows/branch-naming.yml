@@ -12,6 +12,6 @@ jobs:
       - name: Check the branch convention usage
         uses: duart38/branch-convention-check@v2.1.0
         with:
-          standard_branch_check: '(^RS-[0-9]{2,4}-[a-zA-Z0-9-]+$)'
+          standard_branch_check: '^(RS-[0-9]{2,4}-[a-zA-Z0-9-]+)$'
           ignore_branch_check: '(\b(?:testing)\b(-([0-9])+|)\b(?:-[a-z]{3,})+\b)'
           ignore: 'main' # No-space comma separated branches to ignore. above regex will be checked BEFORE this runs
