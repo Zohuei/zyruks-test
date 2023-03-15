@@ -1,17 +1,17 @@
-name: Check branch convention usage
-on: 
+name: Linters
+
+on:
+  push:
   pull_request:
-    types: [opened]
+    branches: 'main'
 
 jobs:
-  branching:
+  gitlint:
     runs-on: ubuntu-latest
+    name: GitLint
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
-      - name: Check the branch convention usage
-        uses: duart38/branch-convention-check@v2.1.0
+      - name: Lint commits, branches, and pull requests
+        uses: aschbacd/gitlint-action@v1.1.1
         with:
-          standard_branch_check: '(^RS-[0-9]{2,4}-[a-zA-Z0-9-]+$)'
-          ignore_branch_check: '(\b(?:testing)\b(-([0-9])+|)\b(?:-[a-z]{3,})+\b)'
-          ignore: 'main' # No-space comma separated branches to ignore. above regex will be checked BEFORE this runs
+          re-commit-message-subject: ^(\[[A-Z]+\-[0-9]+\] )?[A-Z].*((?!\.).)$
+          re-pull-request-title: ^(\[[A-Z]+\-[0-9]+\] )?[A-Z].*((?!\.).)$
