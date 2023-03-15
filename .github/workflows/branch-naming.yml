@@ -13,5 +13,5 @@ jobs:
       - name: Lint commits, branches, and pull requests
         uses: aschbacd/gitlint-action@v1.1.1
         with:
-          re-commit-message-subject: ^(\[[A-Z]+\-[0-9]+\] )?[A-Z].*((?!\.).)$
+          re-commit-message-subject: ^(RS-[0-9]{2,4}-[a-zA-Z0-9-]+)$
           re-pull-request-title: ^(\[[A-Z]+\-[0-9]+\] )?[A-Z].*((?!\.).)$
