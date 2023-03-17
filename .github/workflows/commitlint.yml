@@ -21,10 +21,9 @@ jobs:
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
         run: |
-          from=$(git log --max-count=1 --pretty=format:'%H')^
-          to=$(git log --max-count=1 --pretty=format:'%H')
-          echo "Validating commit range: $from..$to"
-          npx commitlint --from $from --to $to --verbose
+          from=$(git log --max-count=1 --pretty=format:'%H' | awk '{print $1"^"}')
+          to=$(git log --max-count=1 --pretty=format:'%H' | awk '{print $1}')
+          npx commitlint --from=$from --to=$to --verbose
 
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
