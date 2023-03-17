@@ -6,7 +6,7 @@ jobs:
   commitlint:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Print versions
         run: |
           git --version
@@ -20,7 +20,7 @@ jobs:
 
       - name: Validate current commit (last commit) with commitlint
         if: github.event_name == 'push'
-        run: npx commitlint --from HEAD~1 --to HEAD --verbose
+        run: npx commitlint --from HEAD~1 --to HEAD --verbose --debug
 
       - name: Validate PR commits with commitlint
         if: github.event_name == 'pull_request'
